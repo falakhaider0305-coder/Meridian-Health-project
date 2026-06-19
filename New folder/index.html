@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian Health — See a doctor today, from anywhere</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="site-header" id="top">
+  <div class="container nav-row">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28"><path d="M16 3v26M3 16h26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="2" fill="none" opacity="0.35"/></svg>
+      </span>
+      Meridian Health
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="#doctors">Find a doctor</a>
+      <a href="#how">How it works</a>
+      <a href="#chat">Chat &amp; records</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-ghost">Log in</a>
+      <a href="#booking" class="btn btn-primary">Book a visit</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Licensed physicians · Available now</p>
+      <h1 class="display-xl">Talk to a doctor <em>before</em> it gets worse.</h1>
+      <p class="hero-sub">Video visits, secure messaging, and prescriptions — handled from your couch. No waiting room, no commute, no putting it off another week.</p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-primary btn-lg">Book a video visit</a>
+        <a href="#how" class="btn btn-outline btn-lg">See how it works</a>
+      </div>
+      <div class="trust-row">
+        <div class="avatars" aria-hidden="true">
+          <span class="avatar a1"></span><span class="avatar a2"></span><span class="avatar a3"></span><span class="avatar a4"></span>
+        </div>
+        <p><strong>12,400+</strong> visits completed this month</p>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="call-card">
+        <div class="call-card-top">
+          <span class="rec-dot"></span> Live consultation
+          <span class="call-timer" id="callTimer">04:12</span>
+        </div>
+        <div class="call-card-body">
+          <div class="doctor-feed">
+            <div class="ring"></div>
+            <div class="ring ring2"></div>
+            <div class="doc-avatar">DR</div>
+          </div>
+          <p class="doc-feed-name">Dr. Amara Reyes <span>Internal Medicine</span></p>
+        </div>
+        <div class="call-card-controls">
+          <span class="ctrl"></span><span class="ctrl"></span><span class="ctrl ctrl-end"></span>
+        </div>
+      </div>
+      <div class="float-chip chip-vitals">
+        <span class="chip-label">Heart rate</span>
+        <span class="chip-value mono">72 <small>bpm</small></span>
+      </div>
+      <div class="float-chip chip-rx">
+        <span class="chip-label">e-Prescription</span>
+        <span class="chip-value">Sent ✓</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- vitals strip / live readout -->
+  <div class="vitals-strip" role="group" aria-label="Live clinic status">
+    <div class="container vitals-inner">
+      <div class="vital"><span class="vital-dot pulse"></span><span class="mono vital-num">214</span> doctors online now</div>
+      <div class="vital"><span class="mono vital-num">3 min</span> average wait time</div>
+      <div class="vital"><span class="mono vital-num">98.4%</span> patient satisfaction</div>
+      <div class="vital"><span class="mono vital-num">24/7</span> urgent care coverage</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section" id="how">
+  <div class="container">
+    <p class="eyebrow center">The visit, start to finish</p>
+    <h2 class="display-lg center">Four steps. About fifteen minutes.</h2>
+    <div class="steps-grid">
+      <div class="step-card fade-up">
+        <span class="step-tag mono">Step 1</span>
+        <h3>Tell us what's going on</h3>
+        <p>Answer a few questions about your symptoms so we can match you with the right specialist.</p>
+      </div>
+      <div class="step-card fade-up">
+        <span class="step-tag mono">Step 2</span>
+        <h3>Pick a doctor and time</h3>
+        <p>Browse real profiles, read reviews, and choose a slot — often within the hour.</p>
+      </div>
+      <div class="step-card fade-up">
+        <span class="step-tag mono">Step 3</span>
+        <h3>Meet over video</h3>
+        <p>Join the call from your phone or laptop. Share photos or reports right in the chat.</p>
+      </div>
+      <div class="step-card fade-up">
+        <span class="step-tag mono">Step 4</span>
+        <h3>Get your plan</h3>
+        <p>Leave with a treatment plan, e-prescription, or referral — sent straight to your records.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOCTORS ============ -->
+<section class="section section-tint" id="doctors">
+  <div class="container">
+    <div class="section-head-row">
+      <div>
+        <p class="eyebrow">Meet the team</p>
+        <h2 class="display-lg">Doctors who actually have openings.</h2>
+      </div>
+      <div class="filter-pills" role="group" aria-label="Filter doctors by specialty">
+        <button class="pill is-active" data-filter="all">All</button>
+        <button class="pill" data-filter="general">General Medicine</button>
+        <button class="pill" data-filter="pediatrics">Pediatrics</button>
+        <button class="pill" data-filter="dermatology">Dermatology</button>
+        <button class="pill" data-filter="mental">Mental Health</button>
+      </div>
+    </div>
+
+    <div class="doctor-grid" id="doctorGrid">
+
+      <article class="doctor-card" data-spec="general">
+        <div class="chart-tab mono">RX-014</div>
+        <div class="doctor-card-top">
+          <div class="doctor-photo ph1" aria-hidden="true">AR</div>
+          <span class="status-badge online"><span class="status-dot"></span>Online now</span>
+        </div>
+        <h3>Dr. Amara Reyes</h3>
+        <p class="doctor-spec">Internal Medicine · 11 yrs experience</p>
+        <p class="doctor-blurb">Focuses on everyday illness, chronic condition management, and preventive care.</p>
+        <div class="doctor-meta">
+          <span class="mono">★ 4.9</span>
+          <span class="mono">$45 / visit</span>
+        </div>
+        <a href="#booking" class="btn btn-outline btn-block">Book with Dr. Reyes</a>
+      </article>
+
+      <article class="doctor-card" data-spec="pediatrics">
+        <div class="chart-tab mono">RX-027</div>
+        <div class="doctor-card-top">
+          <div class="doctor-photo ph2" aria-hidden="true">JK</div>
+          <span class="status-badge online"><span class="status-dot"></span>Online now</span>
+        </div>
+        <h3>Dr. Jonah Kim</h3>
+        <p class="doctor-spec">Pediatrics · 8 yrs experience</p>
+        <p class="doctor-blurb">Gentle, kid-friendly visits for fevers, rashes, growth checks, and parent questions.</p>
+        <div class="doctor-meta">
+          <span class="mono">★ 4.8</span>
+          <span class="mono">$40 / visit</span>
+        </div>
+        <a href="#booking" class="btn btn-outline btn-block">Book with Dr. Kim</a>
+      </article>
+
+      <article class="doctor-card" data-spec="dermatology">
+        <div class="chart-tab mono">RX-033</div>
+        <div class="doctor-card-top">
+          <div class="doctor-photo ph3" aria-hidden="true">SO</div>
+          <span class="status-badge"><span class="status-dot away"></span>Next slot 2:30pm</span>
+        </div>
+        <h3>Dr. Sofia Oduya</h3>
+        <p class="doctor-spec">Dermatology · 14 yrs experience</p>
+        <p class="doctor-blurb">Skin, hair, and nail concerns — from acne plans to mole checks via photo upload.</p>
+        <div class="doctor-meta">
+          <span class="mono">★ 5.0</span>
+          <span class="mono">$55 / visit</span>
+        </div>
+        <a href="#booking" class="btn btn-outline btn-block">Book with Dr. Oduya</a>
+      </article>
+
+      <article class="doctor-card" data-spec="mental">
+        <div class="chart-tab mono">RX-041</div>
+        <div class="doctor-card-top">
+          <div class="doctor-photo ph4" aria-hidden="true">ML</div>
+          <span class="status-badge online"><span class="status-dot"></span>Online now</span>
+        </div>
+        <h3>Dr. Marcus Lindqvist</h3>
+        <p class="doctor-spec">Psychiatry · 9 yrs experience</p>
+        <p class="doctor-blurb">Anxiety, depression, and medication management in a private, judgment-free space.</p>
+        <div class="doctor-meta">
+          <span class="mono">★ 4.9</span>
+          <span class="mono">$65 / visit</span>
+        </div>
+        <a href="#booking" class="btn btn-outline btn-block">Book with Dr. Lindqvist</a>
+      </article>
+
+      <article class="doctor-card" data-spec="general">
+        <div class="chart-tab mono">RX-052</div>
+        <div class="doctor-card-top">
+          <div class="doctor-photo ph5" aria-hidden="true">PN</div>
+          <span class="status-badge online"><span class="status-dot"></span>Online now</span>
+        </div>
+        <h3>Dr. Priya Nair</h3>
+        <p class="doctor-spec">Family Medicine · 6 yrs experience</p>
+        <p class="doctor-blurb">Whole-family care from colds and infections to annual wellness check-ins.</p>
+        <div class="doctor-meta">
+          <span class="mono">★ 4.7</span>
+          <span class="mono">$40 / visit</span>
+        </div>
+        <a href="#booking" class="btn btn-outline btn-block">Book with Dr. Nair</a>
+      </article>
+
+      <article class="doctor-card" data-spec="dermatology">
+        <div class="chart-tab mono">RX-058</div>
+        <div class="doctor-card-top">
+          <div class="doctor-photo ph6" aria-hidden="true">TB</div>
+          <span class="status-badge"><span class="status-dot away"></span>Next slot tomorrow</span>
+        </div>
+        <h3>Dr. Theo Brandt</h3>
+        <p class="doctor-spec">Dermatology · 10 yrs experience</p>
+        <p class="doctor-blurb">Eczema, psoriasis, and persistent skin conditions with long-term care plans.</p>
+        <div class="doctor-meta">
+          <span class="mono">★ 4.8</span>
+          <span class="mono">$55 / visit</span>
+        </div>
+        <a href="#booking" class="btn btn-outline btn-block">Book with Dr. Brandt</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING ============ -->
+<section class="section" id="booking">
+  <div class="container booking-grid">
+    <div class="booking-intro">
+      <p class="eyebrow">Book a video visit</p>
+      <h2 class="display-lg">Pick a time. We'll handle the rest.</h2>
+      <p class="hero-sub">Choose a doctor, a slot that works for you, and tell us briefly why you're visiting. You'll get a confirmed video link by email and text.</p>
+      <ul class="check-list">
+        <li>No account required to request a slot</li>
+        <li>Reschedule free up to 1 hour before</li>
+        <li>Insurance &amp; self-pay both accepted</li>
+      </ul>
+    </div>
+
+    <form class="booking-card" id="bookingForm" novalidate>
+      <div class="form-row">
+        <label for="docSelect">Doctor</label>
+        <select id="docSelect" name="doctor">
+          <option>Dr. Amara Reyes — Internal Medicine</option>
+          <option>Dr. Jonah Kim — Pediatrics</option>
+          <option>Dr. Sofia Oduya — Dermatology</option>
+          <option>Dr. Marcus Lindqvist — Psychiatry</option>
+          <option>Dr. Priya Nair — Family Medicine</option>
+          <option>Dr. Theo Brandt — Dermatology</option>
+          <option>No preference — match me fastest</option>
+        </select>
+      </div>
+
+      <div class="form-row two-col">
+        <div>
+          <label for="visitDate">Date</label>
+          <input type="date" id="visitDate" name="date" required>
+        </div>
+        <div>
+          <label for="visitTime">Time slot</label>
+          <select id="visitTime" name="time">
+            <option>9:00 AM</option>
+            <option>10:30 AM</option>
+            <option>1:00 PM</option>
+            <option selected>2:30 PM</option>
+            <option>4:15 PM</option>
+            <option>6:00 PM</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="reason">Reason for visit</label>
+        <textarea id="reason" name="reason" rows="3" placeholder="E.g. persistent cough for 5 days, mild fever"></textarea>
+      </div>
+
+      <div class="form-row">
+        <label>Upload a medical report or photo <span class="optional">(optional)</span></label>
+        <label class="upload-zone" id="uploadZone" for="fileInput">
+          <input type="file" id="fileInput" name="reportFile" accept=".pdf,.jpg,.jpeg,.png" multiple hidden>
+          <span class="upload-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 16V4M12 4l-4 4M12 4l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <span><strong>Drop files</strong> or click to browse — PDF, JPG, PNG</span>
+        </label>
+        <div class="file-list" id="fileList" aria-live="polite"></div>
+      </div>
+
+      <div class="form-row">
+        <label for="payMethod">Payment method</label>
+        <div class="pay-options">
+          <label class="pay-option">
+            <input type="radio" name="pay" value="card" checked>
+            <span>Card</span>
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="pay" value="insurance">
+            <span>Insurance</span>
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="pay" value="wallet">
+            <span>Wallet</span>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block btn-lg">Confirm &amp; pay $45.00</button>
+      <p class="form-note">You won't be charged until your visit is confirmed by the doctor.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ CHAT & RECORDS ============ -->
+<section class="section section-tint" id="chat">
+  <div class="container chat-grid">
+    <div class="chat-mock" aria-hidden="true">
+      <div class="chat-window">
+        <div class="chat-header">
+          <div class="doctor-photo ph1 small">AR</div>
+          <div>
+            <p class="chat-doc-name">Dr. Amara Reyes</p>
+            <p class="chat-doc-status"><span class="status-dot"></span>Active now</p>
+          </div>
+        </div>
+        <div class="chat-body">
+          <div class="bubble bubble-doc">Hi Sarah — I reviewed the bloodwork you uploaded. Everything looks within normal range.</div>
+          <div class="bubble bubble-doc">I'd recommend continuing the current dosage for another two weeks.</div>
+          <div class="bubble bubble-me">That's a relief to hear, thank you! Should I still come in for the follow-up scan?</div>
+          <div class="bubble bubble-doc typing"><span></span><span></span><span></span></div>
+        </div>
+        <div class="chat-input-row">
+          <span class="chat-attach" aria-hidden="true">＋</span>
+          <span class="chat-input-fake">Type a message…</span>
+          <span class="chat-send" aria-hidden="true">➤</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-copy">
+      <p class="eyebrow">Secure messaging</p>
+      <h2 class="display-lg">Your doctor, one message away.</h2>
+      <p class="hero-sub">No need to book a full visit for a quick question. Message your care team directly, share medical reports or photos, and get a reply — usually same day.</p>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-icon" aria-hidden="true">🔒</span>
+          <div><strong>End-to-end encrypted</strong><p>Every message and file is encrypted in transit and at rest, meeting HIPAA standards.</p></div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon" aria-hidden="true">📎</span>
+          <div><strong>Upload lab results &amp; reports</strong><p>Attach PDFs, scans, or photos directly — your doctor sees them instantly in your chart.</p></div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon" aria-hidden="true">🗂️</span>
+          <div><strong>Everything stays organized</strong><p>Past visits, prescriptions, and uploaded files live in one searchable medical record.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section" id="pricing">
+  <div class="container">
+    <p class="eyebrow center">Plans</p>
+    <h2 class="display-lg center">Pay per visit, or save with a plan.</h2>
+    <div class="pricing-grid">
+
+      <div class="price-card">
+        <h3>Pay as you go</h3>
+        <p class="price-tag mono">$40<small>–65 / visit</small></p>
+        <p class="price-desc">Best if you only need occasional care.</p>
+        <ul class="price-features">
+          <li>Book any doctor, any time</li>
+          <li>Video, chat &amp; report uploads</li>
+          <li>e-Prescriptions included</li>
+        </ul>
+        <a href="#booking" class="btn btn-outline btn-block">Book a visit</a>
+      </div>
+
+      <div class="price-card is-featured">
+        <span class="price-badge">Most popular</span>
+        <h3>Care Plan</h3>
+        <p class="price-tag mono">$19<small>/ month</small></p>
+        <p class="price-desc">Unlimited messaging + 2 video visits a month.</p>
+        <ul class="price-features">
+          <li>Unlimited secure chat with doctors</li>
+          <li>2 video visits included monthly</li>
+          <li>Priority scheduling (under 5 min)</li>
+          <li>Family member add-ons available</li>
+        </ul>
+        <a href="#booking" class="btn btn-primary btn-block">Start Care Plan</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Family Plan</h3>
+        <p class="price-tag mono">$39<small>/ month</small></p>
+        <p class="price-desc">Everything in Care Plan, for up to 5 people.</p>
+        <ul class="price-features">
+          <li>Covers up to 5 family members</li>
+          <li>Shared medical record dashboard</li>
+          <li>Pediatric specialists included</li>
+        </ul>
+        <a href="#booking" class="btn btn-outline btn-block">Start Family Plan</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="cta-band">
+  <div class="container cta-band-inner">
+    <h2 class="display-lg">214 doctors are online right now.</h2>
+    <a href="#booking" class="btn btn-primary btn-lg">Book your visit</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#top" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="24" height="24"><path d="M16 3v26M3 16h26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="2" fill="none" opacity="0.35"/></svg>
+        </span>
+        Meridian Health
+      </a>
+      <p>Licensed telemedicine care, available in all 50 states.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Care</h4>
+      <a href="#doctors">Find a doctor</a>
+      <a href="#booking">Book a visit</a>
+      <a href="#chat">Message a doctor</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#">About us</a>
+      <a href="#">Careers</a>
+      <a href="#">Press</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="#">Privacy policy</a>
+      <a href="#">Terms of service</a>
+      <a href="#">HIPAA notice</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© 2026 Meridian Health. Not for emergency use — call 911 for emergencies.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
